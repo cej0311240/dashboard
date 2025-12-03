@@ -1,0 +1,6 @@
+@mixin btn-color($color){
+    display: inline-block;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    background-color: $color;
+}

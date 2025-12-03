@@ -39,8 +39,10 @@ const Todos = () => {
   }
   return (
     <div id="todo-page">
-        <h2>할일 목록 리스트</h2>
+      <div className="list">
+        <h2>Todo List</h2>
         <TodoForm onSave={handleTodosSave}/>
+        </div>
         <TodoList todos={todos} onDel={handleTodosDel} onToggle={handleToggle}/>
     </div>
   )

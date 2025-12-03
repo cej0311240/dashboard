@@ -4,6 +4,9 @@ import Login from "./components/Login"
 import Weather from "./components/Weather"
 import Todos from "./components/Todos"
 import Quotes from "./components/Quotes"
+import Clock from "./components/Clock"
+import './Style.css';
+
 
 
 const App = () => {
@@ -26,14 +29,19 @@ const App = () => {
   },[]);
   return (
     <div id="app">
-      {
-        userName ? 
-          <Hello user={userName} onLogout={handleLogout}/>
-          : <Login onLogin={handleLogin}/>
-      }
-      <Quotes />
-      <Todos />
       <Weather />
+      <Clock />
+          {
+        userName ? (
+          <Hello user={userName} onLogout={handleLogout}/>
+          ) : (
+          <div id="login-wrap">
+          <Login onLogin={handleLogin}/>
+          <Todos />
+          </div>
+              )
+          }
+      <Quotes />
     </div>
   )
 }

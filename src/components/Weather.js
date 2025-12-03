@@ -64,14 +64,12 @@ const Weather = () => {
       {
         weather && (
           <>
-            <h2>현재 위치 기준 날씨</h2>
-            <p>도시 : {weather.name}</p>  
-            <p>기온 : {weather.main.temp}℃</p>
-            <p>체감온도 : {weather.main.feels_like}℃</p>
-            <p>날씨 설명 : {weather.weather[0].description}</p>
-            {
+            <p><img src="img\akar-icons_location.svg" />{weather.name}</p>  
+            <p><img src="img\uil_temperature.svg" />{weather.main.temp}℃</p>
+            <p>{weather.weather[0].description}</p>
+            {/* {
               iconUrl && <img src={iconUrl} alt={weather.weather[0].description}/>
-            }
+            } */}
           </>
         )
       }      
